@@ -4,7 +4,7 @@ This repository is currently being finalized and prepared for reproducibility re
 
 ---
 
-# FEWS NET vs IPC – Somalia (2017–2025)
+# Comparative Analysis of FEWS NET and IPC food insecurity data in Somalia
 
 This repository contains the preprocessing and analysis code supporting the paper:
 
@@ -22,7 +22,7 @@ To reproduce all analyses:
 
 1. Open the R project file  
    `agile2026_food_insecurity_anticipatory_action.Rproj`
-   (R ≥ *X.X.X* required).
+   (R version ≥ 4.2.0 is required).
 
 2. Open the script  
    `scripts/Master_script.R`.
@@ -45,7 +45,7 @@ All outputs are written to the `figs/` and `data/outputs/` directories, that are
 ├── agile2026_food_insecurity_anticipatory_action.Rproj
 ├── README.md
 ├── data/
-│   ├── FEWSNET_lhz/            # FEWS NET livelihood zones
+│   ├── FEWSNET_lhz/           # FEWS NET livelihood zones
 │   ├── IPC_current_API/       # IPC current assessment data
 │   ├── IPC_p1_API/            # IPC projection data
 │   ├── IPC_website_dl/        # IPC website downloads
