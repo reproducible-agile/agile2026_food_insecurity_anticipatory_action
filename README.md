@@ -34,8 +34,7 @@ To reproduce all analyses:
    - execute all comparative analyses and skill assessment,
    - generate all figures, maps, and output files necessary to reproduce results.
 
-All outputs are written to the `figs/` and `data/outputs/` directories, that are created in the master script.
-
+All outputs are written to the `figs/` and `data/outputs/` directories, that are created in the master script. All visualization styles to display output map files like in the paper are saved as a QGIS project in `QGIS/`. 
 ---
 
 ## Repository structure
@@ -65,7 +64,8 @@ All outputs are written to the `figs/` and `data/outputs/` directories, that are
 │   ├── Analysis_1_comparison.R
 │   └── Analysis_2_skillassessment.R
 │
-└── figs/                      # Generated figures
+├── figs/                      # Generated figures
+└── QGIS/                      # QGIS project file
 ```
 
 

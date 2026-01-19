@@ -314,6 +314,8 @@ ipc_adm2_sa_stats_sf <- admin %>%
 # Plot maps with same colour scale and breaks for comparison
 bias_cols <- colorRampPalette(c("red3", "white", "steelblue"))(100)
 
+breaks_7 <- seq(-0.5, 0.5, length.out = 8)
+
 # Testview of maps
 plot_bias_map <- function(sf_obj, title) {
   ggplot(sf_obj) +
