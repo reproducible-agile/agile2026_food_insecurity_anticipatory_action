@@ -35,7 +35,7 @@ To reproduce all analyses:
    - generate all figures, maps, and output files necessary to reproduce results.
 
 All outputs are written to the `figs/` and `data/outputs/` directories, that are created in the master script. All visualization styles to display output map files like in the paper are saved as a QGIS project in `QGIS/`. 
----
+
 
 ## Repository structure
 
