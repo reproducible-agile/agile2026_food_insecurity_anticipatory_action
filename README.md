@@ -1,9 +1,3 @@
-⚠️ *Under construction*
-
-This repository is currently being finalized and prepared for reproducibility review.
-
----
-
 # Comparative Analysis of FEWS NET and IPC food insecurity data in Somalia
 
 This repository contains the preprocessing and analysis code supporting the paper:
