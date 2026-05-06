@@ -61,13 +61,15 @@ This option provides a fully reproducible environment and is especially recommen
 
 #### Steps
 
-1. Start the rocker service:
+1. Open a terminal and navigate to the repository folder.
+
+2. Start the rocker service:
 
 ```bash
 RUID="$(id -u)" docker-compose up
 ```
 
-2. Open your browser and visit:
+3. Open your browser and visit:
 
 ```text
 http://localhost:8887
@@ -75,19 +77,19 @@ http://localhost:8887
 
 This opens the RStudio interface running inside Docker (needed for map display).
 
-3. In RStudio, open the R project file:
+4. In RStudio, open the R project file:
 
 ```text
 agile2026_food_insecurity_anticipatory_action.Rproj
 ```
 
-4. Navigate to:
+5. Navigate to:
 
 ```text
 scripts/Master_script.R
 ```
 
-5. Run `Master_script.R`.
+6. Run `Master_script.R`.
 
 This will:
 
