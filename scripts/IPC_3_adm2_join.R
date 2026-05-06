@@ -39,7 +39,7 @@ for (m in months_all) {
     # Rasterization
     r_template <- rast(sub, res = 0.01)
     r_phase <- rasterize(sub, r_template, field = "phase")
-    plot(r_phase, main = paste("Phase", s, m))
+    #plot(r_phase, main = paste("Phase", s, m))
 
     # Save raster
     fname <- file.path(out_dir, paste0(s, "_", m, ".tif"))
@@ -110,7 +110,7 @@ for (i in seq_len(nrow(groups))) {
   sub_vect <- vect(sub)
   r_template <- rast(sub_vect, res = 0.01)
   r_phase <- rasterize(sub_vect, r_template, field = "phase")
-  plot(r_phase, main = paste("Phase", s, st, "-", en))
+  #plot(r_phase, main = paste("Phase", s, st, "-", en))
 
   # Save raster with scenario + period in file name
   fname <- file.path(

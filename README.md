@@ -4,36 +4,13 @@ This repository contains the preprocessing and analysis code supporting the pape
 
 **Food Insecurity Projections for Anticipatory Action: A Comparative Spatiotemporal Analysis of FEWS NET and the IPC in Somalia**
 
-The workflow harmonizes FEWS NET and IPC acute food insecurity classifications,
-generates comparable time series, aggregates results to admin 2 districts,
-and performs both descriptive comparison and projection skill assessment.
+The workflow harmonizes FEWS NET and IPC acute food insecurity classifications, generates comparable time series, aggregates results to admin-2 districts, and performs both descriptive comparison and projection skill assessment.
 
 ---
 
-## Usage
-
-To reproduce all analyses:
-
-1. Open the R project file  
-   `agile2026_food_insecurity_anticipatory_action.Rproj`
-   (R version ≥ 4.2.0 is required).
-
-2. Open the script  
-   `scripts/Master_script.R`.
-
-3. Run the master script.  
-   This will:
-   - load all required libraries,
-   - run the full preprocessing pipeline for FEWS NET and IPC data,
-   - execute all comparative analyses and skill assessment,
-   - generate all figures, maps, and output files necessary to reproduce results.
-
-All outputs are written to the `figs/` and `data/outputs/` directories, that are created in the master script. All visualization styles to display output map files like in the paper are saved as a QGIS project in `QGIS/`. 
-
-
 ## Repository structure
 
-```
+```text
 .
 ├── agile2026_food_insecurity_anticipatory_action.Rproj
 ├── README.md
@@ -62,7 +39,97 @@ All outputs are written to the `figs/` and `data/outputs/` directories, that are
 └── QGIS/                      # QGIS project file
 ```
 
+---
 
+## Usage
+
+There are two options to reproduce the analysis workflow:
+
+- **Docker workflow** (recommended, especially for Ubuntu users)
+- **Native R setup**
+
+---
+
+### Option 1: With Docker (recommended)
+
+This option provides a fully reproducible environment and is especially recommended for Ubuntu users.
+
+#### Requirements
+
+- Docker
+- Docker Compose
+
+#### Steps
+
+1. Start the rocker service:
+
+```bash
+RUID="$(id -u)" docker-compose up
+```
+
+2. Open your browser and visit:
+
+```text
+http://localhost:8887
+```
+
+This opens the RStudio interface running inside Docker (needed for map display).
+
+3. In RStudio, open the R project file:
+
+```text
+agile2026_food_insecurity_anticipatory_action.Rproj
+```
+
+4. Navigate to:
+
+```text
+scripts/Master_script.R
+```
+
+5. Run `Master_script.R`.
+
+This will:
+
+- load all required libraries,
+- run the full preprocessing pipeline for FEWS NET and IPC data,
+- execute all comparative analyses and skill assessment,
+- generate all figures, maps, and output files necessary to reproduce results.
+
+All outputs are written to the `figs/` and `data/outputs/` directories, which are created automatically in the master script.
+
+Visualization styles used for the output map files shown in the paper are stored in the QGIS project under `QGIS/`.
+
+---
+
+### Option 2: Native R setup
+
+1. Open the R project file:
+
+```text
+agile2026_food_insecurity_anticipatory_action.Rproj
+```
+
+(R version ≥ 4.2.0 is required.)
+
+2. Open the script:
+
+```text
+scripts/Master_script.R
+```
+
+3. Run the master script.
+
+This will:
+
+- load all required libraries,
+- run the full preprocessing pipeline for FEWS NET and IPC data,
+- execute all comparative analyses and skill assessment,
+- generate all figures, maps, and output files necessary to reproduce results.
+
+All outputs are written to the `figs/` and `data/outputs/` directories, which are created automatically in the master script.
+
+Visualization styles used for the output map files shown in the paper are stored in the QGIS project under `QGIS/`.
 
 ---
 
@@ -70,32 +137,35 @@ All outputs are written to the `figs/` and `data/outputs/` directories, that are
 
 ### Preprocessing
 
-**FEWS NET**
+#### FEWS NET
+
 - `FEWSNET_1_geom_join.R`  
   Prepares FEWS NET data and links classifications to spatial reference units.
+
 - `FEWSNET_2_ts_building.R`  
   Generates time series on monthly and assessment period level.
+
 - `FEWSNET_3_adm2_join.R`  
   Aggregates FEWS NET time series to admin-2 districts.
 
-**IPC**
+#### IPC
+
 - `IPC_1_data_merging.R`  
   Merges IPC current and projection datasets.
+
 - `IPC_2_ts_building.R`  
   Generates time series on monthly and assessment period level.
+
 - `IPC_3_adm2_join.R`  
   Aggregates IPC time series to admin-2 districts.
 
 ### Analysis
 
 - `Analysis_1_comparison.R`  
-  Comparative analysis of FEWS NET and IPC current assessments and projections over the period 2017-2025.
+  Comparative analysis of FEWS NET and IPC current assessments and projections over the period 2017–2025.
+
 - `Analysis_2_skillassessment.R`  
   Projection skill assessment, including bias metrics and error timelines.
-
-
-
-
 
 
 
