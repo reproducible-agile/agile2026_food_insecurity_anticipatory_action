@@ -77,17 +77,9 @@ http://localhost:8887
 
 This opens the RStudio interface running inside Docker (needed for map display).
 
-4. In RStudio, open the R project file:
+4. In RStudio, open the R project file: `agile2026_food_insecurity_anticipatory_action.Rproj`
 
-```text
-agile2026_food_insecurity_anticipatory_action.Rproj
-```
-
-5. Navigate to:
-
-```text
-scripts/Master_script.R
-```
+5. Navigate to `scripts/Master_script.R`
 
 6. Run `Master_script.R`.
 
@@ -106,19 +98,11 @@ Visualization styles used for the output map files shown in the paper are stored
 
 ### Option 2: Native R setup
 
-1. Open the R project file:
-
-```text
-agile2026_food_insecurity_anticipatory_action.Rproj
-```
+1. Open the R project file `agile2026_food_insecurity_anticipatory_action.Rproj`
 
 (R version ≥ 4.2.0 is required.)
 
-2. Open the script:
-
-```text
-scripts/Master_script.R
-```
+2. Open the script `scripts/Master_script.R`
 
 3. Run the master script.
 
