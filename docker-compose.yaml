@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  rocker-service:
+    container_name: food_insecurity
+
+    image: rocker/geospatial:latest
+
+    ports:
+      - 8887:8787
+
+    environment:
+      - USERID=$RUID
+      - PASSWORD=yourpassword
+      - DISABLE_AUTH=true
+
+    volumes:
+      - ../agile2026_food_insecurity_anticipatory_action:/home/rstudio/agile2026_food_insecurity_anticipatory_action
+
+    working_dir: /home/rstudio/agile2026_food_insecurity_anticipatory_action
+
+    #command: Rscript scripts/Master_script.R

@@ -2,6 +2,8 @@
 # Master script to reproduce all analyses
 # ------------------------------------------------------
 
+install.packages(c("exactextractr","ggpubr","viridis"))
+
 # Load required packages (assumes packages are installed;
 # see README for installation instructions)
 invisible(lapply(
