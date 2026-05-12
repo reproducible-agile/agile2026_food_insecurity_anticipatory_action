@@ -48,3 +48,23 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 .DS_Store
+
+data/intermediate/fews_monthly_rasters/
+
+data/intermediate/fews_period_rasters/
+
+data/intermediate/ipc_monthly_rasters/
+
+data/intermediate/ipc_period_rasters/
+
+data/intermediate/fews_all_long_ts.gpkg
+
+data/intermediate/fews_all_long.gpkg
+
+data/intermediate/fewsnet_all_geom.gpkg
+
+data/intermediate/IPC_all_long_ts.gpkg
+
+data/intermediate/IPC_all_long.gpkg
+
+data/intermediate/ipc_cs_p1_all.gpkg
